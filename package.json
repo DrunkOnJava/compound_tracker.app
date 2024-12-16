@@ -29,9 +29,9 @@
 		"live-server": "^1.2.2",
 		"prettier": "^3.0.0"
 	},
-	"homepage": "https://drunkonjava.github.io/compound-tracker",
+	"homepage": "https://drunkonjava.github.io/compound_tracker.app",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/drunkonjava/compound-tracker.git"
+		"url": "git+https://github.com/drunkonjava/compound_tracker.app.git"
 	}
 }
