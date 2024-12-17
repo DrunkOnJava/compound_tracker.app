@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
@@ -7,163 +7,16 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/luxon/2.0.2/luxon.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-adapter-luxon/1.0.0/chartjs-adapter-luxon.min.js"></script>
-		<style>
-			* {
-				box-sizing: border-box;
-				margin: 0;
-				padding: 0;
-			}
-			body {
-				font-family: system-ui;
-				line-height: 1.5;
-				background: #f0f2f5;
-				padding: 20px;
-			}
-			.container {
-				max-width: 1200px;
-				margin: auto;
-				display: grid;
-				gap: 20px;
-				grid-template-columns: 1fr;
-			}
-			@media (min-width: 768px) {
-				.container {
-					grid-template-columns: 300px 1fr;
-				}
-			}
-			.card {
-				background: white;
-				border-radius: 8px;
-				padding: 20px;
-				box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-			}
-			.input-section {
-				position: sticky;
-				top: 20px;
-			}
-			.form-group {
-				margin-bottom: 15px;
-			}
-			label {
-				display: block;
-				margin-bottom: 5px;
-				font-weight: 500;
-			}
-			select,
-			input,
-			button {
-				width: 100%;
-				padding: 8px;
-				border: 1px solid #ddd;
-				border-radius: 4px;
-				font-size: 14px;
-			}
-			button {
-				background: #1a73e8;
-				color: white;
-				border: none;
-				cursor: pointer;
-				font-weight: 500;
-			}
-			button:hover {
-				background: #1557b0;
-			}
-			.delete-btn {
-				background: #dc3545;
-				padding: 4px 8px;
-				width: auto;
-			}
-			.delete-btn:hover {
-				background: #c82333;
-			}
-			table {
-				width: 100%;
-				border-collapse: collapse;
-			}
-			th,
-			td {
-				padding: 12px;
-				text-align: left;
-				border-bottom: 1px solid #ddd;
-			}
-			#chart-container {
-				height: 400px;
-				margin-bottom: 20px;
-			}
-			.alert {
-				padding: 10px;
-				border-radius: 4px;
-				margin-bottom: 15px;
-				display: none;
-			}
-			.alert-success {
-				background: #d4edda;
-				color: #155724;
-			}
-			.alert-error {
-				background: #f8d7da;
-				color: #721c24;
-			}
-		</style>
+		<link rel="stylesheet" href="./css/styles.css" />
+		<link rel="stylesheet" href="./css/components.css" />
 	</head>
 	<body>
 		<div class="container">
 			<div class="input-section">
-				<div class="card">
-					<h2 style="margin-bottom: 20px">Add Administration</h2>
-					<div id="alert" class="alert"></div>
-					<form id="admin-form" onsubmit="handleSubmit(event)">
-						<div class="form-group">
-							<label for="compound">Compound</label>
-							<select id="compound" required>
-								<option value="">Select compound...</option>
-								<optgroup label="Testosterone & Derivatives">
-									<option value="test-e">Testosterone Enanthate</option>
-									<option value="test-c">Testosterone Cypionate</option>
-									<option value="test-p">Testosterone Propionate</option>
-									<option value="test-s">Testosterone Suspension</option>
-									<option value="test-u">Testosterone Undecanoate</option>
-								</optgroup>
-								<optgroup label="19-nors">
-									<option value="deca">Nandrolone Decanoate</option>
-									<option value="npp">Nandrolone Phenylpropionate</option>
-									<option value="tren-a">Trenbolone Acetate</option>
-									<option value="tren-e">Trenbolone Enanthate</option>
-									<option value="tren-h">
-										Trenbolone Hexahydrobenzylcarbonate
-									</option>
-								</optgroup>
-								<optgroup label="DHT Derivatives">
-									<option value="mast-p">Masteron Propionate</option>
-									<option value="mast-e">Masteron Enanthate</option>
-									<option value="primo-e">Primobolan Enanthate</option>
-									<option value="primo-a">Primobolan Acetate</option>
-									<option value="var">Anavar</option>
-									<option value="win">Winstrol</option>
-								</optgroup>
-								<optgroup label="Other Compounds">
-									<option value="eq">Boldenone Undecylenate</option>
-									<option value="bold-c">Boldenone Cypionate</option>
-									<option value="dbol">Dianabol</option>
-									<option value="tbol">Turinabol</option>
-									<option value="halo">Halotestin</option>
-									<option value="anadrol">Anadrol</option>
-									<option value="primo-oral">Primobolan Oral</option>
-									<option value="prov">Proviron</option>
-								</optgroup>
-							</select>
-						</div>
-						<div class="form-group">
-							<label for="dose">Dose (mg)</label>
-							<input type="number" id="dose" min="0" step="0.1" required />
-						</div>
-						<div class="form-group">
-							<label for="date">Date & Time</label>
-							<input type="datetime-local" id="date" required />
-						</div>
-						<button type="submit">Add Entry</button>
-					</form>
-				</div>
+				<!-- Components will be loaded here -->
+				<div id="profile-container"></div>
+				<div id="compound-info-container"></div>
+				<div id="admin-form-container"></div>
 			</div>
 
 			<div class="main-content">
@@ -173,8 +26,8 @@
 					</div>
 				</div>
 
-				<div class="card" style="margin-top: 20px">
-					<h2 style="margin-bottom: 20px">Administration Log</h2>
+				<div class="card" style="margin-top: var(--spacing-lg)">
+					<h2 style="margin-bottom: var(--spacing-lg)">Administration Log</h2>
 					<table>
 						<thead>
 							<tr>
@@ -190,233 +43,80 @@
 			</div>
 		</div>
 
-		<script>
-			// Data structure for compounds and their properties
-			const compounds = {
-				"test-e": {
-					name: "Testosterone Enanthate",
-					halfLife: 4.5,
-					color: "#2ecc71",
-				},
-				"test-c": {
-					name: "Testosterone Cypionate",
-					halfLife: 5,
-					color: "#27ae60",
-				},
-				"test-p": {
-					name: "Testosterone Propionate",
-					halfLife: 0.8,
-					color: "#16a085",
-				},
-				"test-s": {
-					name: "Testosterone Suspension",
-					halfLife: 0.3,
-					color: "#1abc9c",
-				},
-				"test-u": {
-					name: "Testosterone Undecanoate",
-					halfLife: 20.9,
-					color: "#2ed573",
-				},
-				deca: { name: "Nandrolone Decanoate", halfLife: 6, color: "#e74c3c" },
-				npp: {
-					name: "Nandrolone Phenylpropionate",
-					halfLife: 2,
-					color: "#c0392b",
-				},
-				"tren-a": { name: "Trenbolone Acetate", halfLife: 1, color: "#9b59b6" },
-				"tren-e": {
-					name: "Trenbolone Enanthate",
-					halfLife: 4.5,
-					color: "#8e44ad",
-				},
-				"tren-h": {
-					name: "Trenbolone Hexahydrobenzylcarbonate",
-					halfLife: 7,
-					color: "#a55eea",
-				},
-				"mast-p": {
-					name: "Masteron Propionate",
-					halfLife: 0.8,
-					color: "#3498db",
-				},
-				"mast-e": {
-					name: "Masteron Enanthate",
-					halfLife: 4.5,
-					color: "#2980b9",
-				},
-				"primo-e": {
-					name: "Primobolan Enanthate",
-					halfLife: 4.5,
-					color: "#0abde3",
-				},
-				"primo-a": {
-					name: "Primobolan Acetate",
-					halfLife: 0.8,
-					color: "#48dbfb",
-				},
-				var: { name: "Anavar", halfLife: 0.4, color: "#00d2d3" },
-				win: { name: "Winstrol", halfLife: 0.4, color: "#54a0ff" },
-				eq: { name: "Boldenone Undecylenate", halfLife: 14, color: "#f1c40f" },
-				"bold-c": {
-					name: "Boldenone Cypionate",
-					halfLife: 5,
-					color: "#f39c12",
-				},
-				dbol: { name: "Dianabol", halfLife: 0.2, color: "#e67e22" },
-				tbol: { name: "Turinabol", halfLife: 0.4, color: "#d35400" },
-				halo: { name: "Halotestin", halfLife: 0.3, color: "#ff6b6b" },
-				anadrol: { name: "Anadrol", halfLife: 0.3, color: "#ff4757" },
-				"primo-oral": {
-					name: "Primobolan Oral",
-					halfLife: 0.2,
-					color: "#5f27cd",
-				},
-				prov: { name: "Proviron", halfLife: 0.5, color: "#341f97" },
-			};
+		<script type="module">
+			// Import all modules
+			const modules = await Promise.all([
+				import("./js/utils/Utils.js"),
+				import("./js/managers/ProfileManager.js"),
+				import("./js/managers/AdminManager.js"),
+				import("./js/managers/ChartManager.js"),
+				import("./js/managers/CompoundManager.js"),
+			]);
 
-			// State management
-			let administrations = [];
-			let chart = null;
+			const [
+				{ Utils },
+				{ ProfileManager },
+				{ AdminManager },
+				{ ChartManager },
+				{ CompoundManager },
+			] = modules;
 
-			// Utility functions
-			const getTimePoints = () => {
-				const now = new Date();
-				const timePoints = [];
-				let currentTime = new Date(now - 30 * 24 * 60 * 60 * 1000);
-				const endTime = new Date(now.getTime() + 30 * 24 * 60 * 60 * 1000);
+			// Load components
+			async function loadComponents() {
+				try {
+					const [profileHtml, compoundInfoHtml, adminFormHtml] =
+						await Promise.all([
+							fetch("./components/profile.html").then((r) => r.text()),
+							fetch("./components/compound-info.html").then((r) => r.text()),
+							fetch("./components/admin-form.html").then((r) => r.text()),
+						]);
 
-				while (currentTime <= endTime) {
-					timePoints.push(new Date(currentTime));
-					currentTime.setHours(currentTime.getHours() + 6);
+					document.getElementById("profile-container").innerHTML = profileHtml;
+					document.getElementById("compound-info-container").innerHTML =
+						compoundInfoHtml;
+					document.getElementById("admin-form-container").innerHTML =
+						adminFormHtml;
+				} catch (error) {
+					console.error("Error loading components:", error);
 				}
-				return timePoints;
-			};
+			}
 
-			const calculateLevel = (admin, time, halfLife) => {
-				const timeDiff = (time - admin.date) / (24 * 60 * 60 * 1000);
-				return timeDiff >= 0
-					? admin.dose * Math.pow(0.5, timeDiff / halfLife)
-					: 0;
-			};
+			// Initialize application
+			// Initialize application
+			async function initialize() {
+				try {
+					// Make managers globally available for HTML event handlers
+					window.ProfileManager = ProfileManager;
+					window.AdminManager = AdminManager;
+					window.CompoundManager = CompoundManager;
 
-			// UI functions
-			const showAlert = (message, type = "error") => {
-				const alert = document.getElementById("alert");
-				alert.textContent = message;
-				alert.className = `alert alert-${type}`;
-				alert.style.display = "block";
-				setTimeout(() => (alert.style.display = "none"), 3000);
-			};
+					// Load components first
+					await loadComponents();
 
-			const updateLog = () => {
-				const logBody = document.getElementById("log-body");
-				logBody.innerHTML = administrations
-					.sort((a, b) => b.date - a.date)
-					.map(
-						(admin) => `
-                <tr>
-                    <td>${admin.date.toLocaleString()}</td>
-                    <td>${compounds[admin.compound].name}</td>
-                    <td>${admin.dose}</td>
-                    <td><button class="delete-btn" onclick="deleteAdministration(${
-											admin.id
-										})">Delete</button></td>
-                </tr>
-            `
-					)
-					.join("");
-			};
-
-			const updateChart = () => {
-				const timePoints = getTimePoints();
-				const activeCompounds = [
-					...new Set(administrations.map((a) => a.compound)),
-				];
-
-				const datasets = activeCompounds.map((compound) => ({
-					label: compounds[compound].name,
-					data: timePoints.map((time) => ({
-						x: time,
-						y: administrations
-							.filter((admin) => admin.compound === compound)
-							.reduce(
-								(total, admin) =>
-									total +
-									calculateLevel(admin, time, compounds[compound].halfLife),
-								0
-							),
-					})),
-					borderColor: compounds[compound].color,
-					fill: false,
-					tension: 0.4,
-				}));
-
-				if (chart) chart.destroy();
-
-				chart = new Chart(document.getElementById("chart").getContext("2d"), {
-					type: "line",
-					data: { datasets },
-					options: {
-						responsive: true,
-						interaction: { intersect: false, mode: "index" },
-						scales: {
-							x: {
-								type: "time",
-								time: { unit: "day" },
-								title: { display: true, text: "Date" },
-							},
-							y: {
-								beginAtZero: true,
-								title: { display: true, text: "Active Amount (mg)" },
-							},
-						},
-					},
-				});
-			};
-
-			// Event handlers
-			const handleSubmit = (event) => {
-				event.preventDefault();
-				const form = event.target;
-				const compound = form.compound.value;
-				const dose = parseFloat(form.dose.value);
-				const date = form.date.value;
-
-				if (!compound || !dose || dose <= 0 || !date) {
-					showAlert("Please fill all fields correctly");
-					return;
+					// Initialize after components are loaded
+					Utils.initializeDateTime();
+					ProfileManager.switchProfile(ProfileManager.currentProfile);
+					
+					// Initialize compound manager last
+					setTimeout(() => {
+						CompoundManager.initialize();
+					}, 100);
+				} catch (error) {
+					console.error("Error initializing application:", error);
 				}
+			}
 
-				administrations.push({
-					id: Date.now(),
-					compound,
-					dose,
-					date: new Date(date),
-				});
-
-				updateLog();
-				updateChart();
-				showAlert("Entry added successfully", "success");
-				form.reset();
-				initializeDateTime();
-			};
-
-			const deleteAdministration = (id) => {
-				administrations = administrations.filter((admin) => admin.id !== id);
-				updateLog();
-				updateChart();
-			};
-
-			// Initialize
-			const initializeDateTime = () => {
-				const now = new Date();
-				now.setMinutes(now.getMinutes() - now.getTimezoneOffset());
-				document.getElementById("date").value = now.toISOString().slice(0, 16);
-			};
-
-			initializeDateTime();
-			updateChart();
-		</script>
+			// Start initialization and handle any errors
+			initialize().catch(error => {
+				console.error("Fatal error during initialization:", error);
+				document.body.innerHTML = `
+					<div class="container">
+						<div class="card">
+							<h2>Error Loading Application</h2>
+							<p>Please refresh the page to try again.</p>
+						</div>
+					</div>
+				`;
+			});
 	</body>
 </html>

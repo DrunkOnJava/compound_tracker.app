@@ -1,0 +1,252 @@
+/* Grid Area Components */
+.profile-card-container {
+	grid-area: profile;
+}
+
+.admin-card-container {
+	grid-area: admin;
+}
+
+.compound-info {
+	grid-area: info;
+}
+
+/* Profile Styles */
+.profile-cards {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: var(--spacing-md);
+}
+
+@media (max-width: 480px) {
+	.profile-cards {
+		grid-template-columns: 1fr;
+	}
+}
+
+.profile-card {
+	border: 2px solid var(--border-color);
+	border-radius: var(--border-radius);
+	padding: var(--spacing-sm);
+	cursor: pointer;
+	transition: all var(--transition-normal);
+	text-align: center;
+	background: var(--bg-secondary);
+	position: relative;
+	overflow: hidden;
+}
+
+.profile-card:hover {
+	border-color: var(--primary-color);
+	transform: translateY(-2px);
+	box-shadow: var(--shadow-sm);
+}
+
+.profile-card:focus-visible {
+	outline: 2px solid var(--primary-color);
+	outline-offset: 2px;
+}
+
+.profile-card.active {
+	border-color: var(--primary-color);
+	background: color-mix(in srgb, var(--primary-color) 10%, var(--bg-secondary));
+}
+
+.profile-avatar {
+	width: 48px;
+	height: 48px;
+	border-radius: 50%;
+	margin: 0 auto var(--spacing-sm);
+	background: var(--primary-color);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	font-weight: bold;
+	font-size: 18px;
+	transition: transform var(--transition-fast);
+}
+
+.profile-card:hover .profile-avatar {
+	transform: scale(1.1);
+}
+
+.profile-name {
+	font-size: 14px;
+	font-weight: 500;
+	color: var(--text-primary);
+}
+
+/* Loading state for profile cards */
+.profile-card.loading .profile-avatar {
+	background: var(--border-color);
+	animation: skeleton-loading 1s infinite alternate;
+}
+
+.profile-card.loading .profile-name {
+	width: 80%;
+	height: 14px;
+	margin: 0 auto;
+	background: var(--border-color);
+	border-radius: var(--border-radius);
+	animation: skeleton-loading 1s infinite alternate;
+}
+
+/* Compound Info Styles */
+.compound-info {
+	font-size: 14px;
+	transition: opacity var(--transition-normal);
+}
+
+.compound-info h4 {
+	color: var(--text-primary);
+	margin: 0 0 var(--spacing-md);
+	font-size: 16px;
+	font-weight: 600;
+	padding-bottom: var(--spacing-xs);
+	display: flex;
+	align-items: center;
+	gap: var(--spacing-sm);
+}
+
+.compound-info h4::before {
+	content: "";
+	display: block;
+	width: 4px;
+	height: 16px;
+	background: var(--primary-color);
+	border-radius: 2px;
+	transition: background var(--transition-normal);
+}
+
+.compound-info p {
+	margin: var(--spacing-sm) 0;
+	line-height: 1.6;
+	color: var(--text-secondary);
+}
+
+.compound-info section {
+	background: var(--bg-secondary);
+	border-radius: var(--border-radius);
+	padding: calc(var(--spacing-md) + 4px);
+	margin-bottom: var(--spacing-md);
+	box-shadow: var(--shadow-sm);
+	transition: all var(--transition-normal);
+	border: 1px solid var(--border-color);
+}
+
+.compound-info section:hover {
+	box-shadow: var(--shadow-md);
+	transform: translateY(-2px);
+}
+
+.compound-info section:last-child {
+	margin-bottom: 0;
+}
+
+/* Loading state for compound info */
+.compound-info.loading section {
+	pointer-events: none;
+}
+
+.compound-info.loading h4::before {
+	animation: skeleton-loading 1s infinite alternate;
+}
+
+.compound-info.loading .skeleton-text {
+	height: 14px;
+	background: var(--border-color);
+	margin-bottom: var(--spacing-sm);
+	border-radius: var(--border-radius);
+	animation: skeleton-loading 1s infinite alternate;
+}
+
+/* Warning and Risk Styles */
+.warning,
+.risk {
+	padding: var(--spacing-sm);
+	border-radius: var(--border-radius);
+	margin: var(--spacing-sm) 0;
+	font-weight: 500;
+	display: flex;
+	align-items: center;
+	gap: var(--spacing-sm);
+}
+
+.warning::before,
+.risk::before {
+	content: "⚠️";
+	font-size: 16px;
+}
+
+.warning-high,
+.risk-high {
+	background: var(--error-bg);
+	color: var(--error-color);
+}
+
+.warning-moderate,
+.risk-moderate {
+	background: var(--warning-bg);
+	color: var(--warning-color);
+}
+
+.warning-low,
+.risk-low {
+	background: var(--success-bg);
+	color: var(--success-color);
+}
+
+/* Tags */
+.tag {
+	display: inline-flex;
+	align-items: center;
+	padding: 4px var(--spacing-md);
+	border-radius: 16px;
+	background: color-mix(in srgb, var(--primary-color) 15%, var(--bg-secondary));
+	color: var(--primary-color);
+	margin: 2px;
+	font-size: 12px;
+	font-weight: 500;
+	transition: all var(--transition-fast);
+}
+
+.tag:hover {
+	background: color-mix(in srgb, var(--primary-color) 20%, var(--bg-secondary));
+	transform: translateY(-1px);
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+	.profile-card,
+	.profile-avatar,
+	.compound-info section,
+	.tag {
+		transition: none;
+	}
+}
+
+/* Focus indicators */
+.tag:focus-visible,
+.warning:focus-visible,
+.risk:focus-visible {
+	outline: 2px solid var(--primary-color);
+	outline-offset: 2px;
+}
+
+/* Loading animation for components */
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translateY(10px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.compound-info section,
+.profile-card {
+	animation: fadeIn var(--transition-normal);
+}
