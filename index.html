@@ -11,6 +11,44 @@
 		<link rel="stylesheet" href="./css/components.css" />
 	</head>
 	<body>
+		<header class="app-header">
+			<div class="header-content">
+				<h1>Compound Tracker</h1>
+				<p class="subtitle">
+					Track and analyze your compound administration data
+				</p>
+			</div>
+		</header>
+
+		<div class="welcome-section">
+			<div class="card">
+				<h2>Welcome to Compound Tracker</h2>
+				<div class="features-grid">
+					<div class="feature">
+						<h3>Profile Management</h3>
+						<p>
+							Create and manage multiple profiles to track different compound
+							administration schedules.
+						</p>
+					</div>
+					<div class="feature">
+						<h3>Data Visualization</h3>
+						<p>
+							View your administration history through interactive charts and
+							detailed logs.
+						</p>
+					</div>
+					<div class="feature">
+						<h3>Compound Information</h3>
+						<p>
+							Access detailed information about different compounds and their
+							properties.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
 		<div class="container">
 			<div class="input-section">
 				<!-- Components will be loaded here -->
@@ -96,7 +134,7 @@
 					// Initialize after components are loaded
 					Utils.initializeDateTime();
 					ProfileManager.switchProfile(ProfileManager.currentProfile);
-					
+
 					// Initialize compound manager last
 					setTimeout(() => {
 						CompoundManager.initialize();
@@ -107,7 +145,7 @@
 			}
 
 			// Start initialization and handle any errors
-			initialize().catch(error => {
+			initialize().catch((error) => {
 				console.error("Fatal error during initialization:", error);
 				document.body.innerHTML = `
 					<div class="container">
@@ -118,5 +156,6 @@
 					</div>
 				`;
 			});
+		</script>
 	</body>
 </html>
