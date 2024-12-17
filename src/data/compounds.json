@@ -1,0 +1,506 @@
+{
+	"test-e": {
+		"name": "Testosterone Enanthate",
+		"scientificClass": "Androgen and Anabolic Steroid",
+		"halfLife": 4.5,
+		"color": "#2ecc71",
+		"risks": {
+			"hairLoss": "High",
+			"bloating": "Moderate",
+			"aggression": "_*WARNING:* May cause increased aggression in sensitive individuals_"
+		},
+		"benefits": {
+			"jointPainReduction": "Low",
+			"hungerStimulation": "Moderate"
+		},
+		"usage": {
+			"cutting": false,
+			"bulking": true,
+			"commonDosing": "250-500mg every 3.5 days",
+			"commonStrengths": ["250mg/ml", "300mg/ml"]
+		}
+	},
+	"test-c": {
+		"name": "Testosterone Cypionate",
+		"scientificClass": "Androgen and Anabolic Steroid",
+		"halfLife": 5,
+		"color": "#27ae60",
+		"risks": {
+			"hairLoss": "High",
+			"bloating": "Moderate",
+			"aggression": "_*WARNING:* May cause increased aggression in sensitive individuals_"
+		},
+		"benefits": {
+			"jointPainReduction": "Low",
+			"hungerStimulation": "Moderate"
+		},
+		"usage": {
+			"cutting": false,
+			"bulking": true,
+			"commonDosing": "250-500mg every 3.5 days",
+			"commonStrengths": ["200mg/ml", "250mg/ml"]
+		}
+	},
+	"test-p": {
+		"name": "Testosterone Propionate",
+		"scientificClass": "Androgen and Anabolic Steroid",
+		"halfLife": 0.8,
+		"color": "#16a085",
+		"risks": {
+			"hairLoss": "High",
+			"bloating": "Low",
+			"aggression": "_*WARNING:* May cause increased aggression in sensitive individuals_"
+		},
+		"benefits": {
+			"jointPainReduction": "Low",
+			"hungerStimulation": "Moderate"
+		},
+		"usage": {
+			"cutting": true,
+			"bulking": true,
+			"commonDosing": "50-100mg every other day",
+			"commonStrengths": ["100mg/ml"]
+		}
+	},
+	"test-s": {
+		"name": "Testosterone Suspension",
+		"scientificClass": "Androgen and Anabolic Steroid",
+		"halfLife": 0.3,
+		"color": "#1abc9c",
+		"risks": {
+			"hairLoss": "High",
+			"bloating": "Low",
+			"aggression": "_*WARNING:* High risk of aggressive behavior due to rapid absorption_"
+		},
+		"benefits": {
+			"jointPainReduction": "None",
+			"hungerStimulation": "High"
+		},
+		"usage": {
+			"cutting": true,
+			"bulking": true,
+			"commonDosing": "50-100mg daily",
+			"commonStrengths": ["100mg/ml"]
+		}
+	},
+	"test-u": {
+		"name": "Testosterone Undecanoate",
+		"scientificClass": "Androgen and Anabolic Steroid",
+		"halfLife": 20.9,
+		"color": "#2ed573",
+		"risks": {
+			"hairLoss": "High",
+			"bloating": "Moderate",
+			"aggression": "_*WARNING:* May cause increased aggression in sensitive individuals_"
+		},
+		"benefits": {
+			"jointPainReduction": "Low",
+			"hungerStimulation": "Moderate"
+		},
+		"usage": {
+			"cutting": false,
+			"bulking": true,
+			"commonDosing": "750-1000mg every 10-14 days",
+			"commonStrengths": ["250mg/ml"]
+		}
+	},
+	"deca": {
+		"name": "Nandrolone Decanoate",
+		"scientificClass": "19-nor Anabolic Steroid",
+		"halfLife": 6,
+		"color": "#e74c3c",
+		"risks": {
+			"hairLoss": "Low",
+			"bloating": "High",
+			"aggression": "Low"
+		},
+		"benefits": {
+			"jointPainReduction": "High",
+			"hungerStimulation": "High"
+		},
+		"usage": {
+			"cutting": false,
+			"bulking": true,
+			"commonDosing": "200-400mg per week",
+			"commonStrengths": ["200mg/ml", "300mg/ml"]
+		}
+	},
+	"npp": {
+		"name": "Nandrolone Phenylpropionate",
+		"scientificClass": "19-nor Anabolic Steroid",
+		"halfLife": 2,
+		"color": "#c0392b",
+		"risks": {
+			"hairLoss": "Low",
+			"bloating": "Moderate",
+			"aggression": "Low"
+		},
+		"benefits": {
+			"jointPainReduction": "High",
+			"hungerStimulation": "Moderate"
+		},
+		"usage": {
+			"cutting": true,
+			"bulking": true,
+			"commonDosing": "100-150mg every other day",
+			"commonStrengths": ["100mg/ml"]
+		}
+	},
+	"tren-a": {
+		"name": "Trenbolone Acetate",
+		"scientificClass": "19-nor Anabolic Steroid",
+		"halfLife": 1,
+		"color": "#9b59b6",
+		"risks": {
+			"hairLoss": "High",
+			"bloating": "None",
+			"aggression": "_*WARNING:* Very high risk of increased aggression and mood changes_"
+		},
+		"benefits": {
+			"jointPainReduction": "None",
+			"hungerStimulation": "Low"
+		},
+		"usage": {
+			"cutting": true,
+			"bulking": true,
+			"commonDosing": "50-100mg every other day",
+			"commonStrengths": ["100mg/ml"]
+		}
+	},
+	"tren-e": {
+		"name": "Trenbolone Enanthate",
+		"scientificClass": "19-nor Anabolic Steroid",
+		"halfLife": 4.5,
+		"color": "#8e44ad",
+		"risks": {
+			"hairLoss": "High",
+			"bloating": "None",
+			"aggression": "_*WARNING:* Very high risk of increased aggression and mood changes_"
+		},
+		"benefits": {
+			"jointPainReduction": "None",
+			"hungerStimulation": "Low"
+		},
+		"usage": {
+			"cutting": true,
+			"bulking": true,
+			"commonDosing": "200-400mg per week",
+			"commonStrengths": ["200mg/ml"]
+		}
+	},
+	"tren-h": {
+		"name": "Trenbolone Hexahydrobenzylcarbonate",
+		"scientificClass": "19-nor Anabolic Steroid",
+		"halfLife": 7,
+		"color": "#a55eea",
+		"risks": {
+			"hairLoss": "High",
+			"bloating": "None",
+			"aggression": "_*WARNING:* Very high risk of increased aggression and mood changes_"
+		},
+		"benefits": {
+			"jointPainReduction": "None",
+			"hungerStimulation": "Low"
+		},
+		"usage": {
+			"cutting": true,
+			"bulking": true,
+			"commonDosing": "200-400mg per week",
+			"commonStrengths": ["100mg/ml"]
+		}
+	},
+	"mast-p": {
+		"name": "Masteron Propionate",
+		"scientificClass": "DHT Derivative",
+		"halfLife": 0.8,
+		"color": "#3498db",
+		"risks": {
+			"hairLoss": "Very High",
+			"bloating": "None",
+			"aggression": "_*WARNING:* Moderate risk of increased aggression_"
+		},
+		"benefits": {
+			"jointPainReduction": "None",
+			"hungerStimulation": "None"
+		},
+		"usage": {
+			"cutting": true,
+			"bulking": false,
+			"commonDosing": "100-150mg every other day",
+			"commonStrengths": ["100mg/ml"]
+		}
+	},
+	"mast-e": {
+		"name": "Masteron Enanthate",
+		"scientificClass": "DHT Derivative",
+		"halfLife": 4.5,
+		"color": "#2980b9",
+		"risks": {
+			"hairLoss": "Very High",
+			"bloating": "None",
+			"aggression": "_*WARNING:* Moderate risk of increased aggression_"
+		},
+		"benefits": {
+			"jointPainReduction": "None",
+			"hungerStimulation": "None"
+		},
+		"usage": {
+			"cutting": true,
+			"bulking": false,
+			"commonDosing": "200-400mg per week",
+			"commonStrengths": ["200mg/ml"]
+		}
+	},
+	"primo-e": {
+		"name": "Primobolan Enanthate",
+		"scientificClass": "DHT Derivative",
+		"halfLife": 4.5,
+		"color": "#0abde3",
+		"risks": {
+			"hairLoss": "Moderate",
+			"bloating": "None",
+			"aggression": "Very Low"
+		},
+		"benefits": {
+			"jointPainReduction": "None",
+			"hungerStimulation": "None"
+		},
+		"usage": {
+			"cutting": true,
+			"bulking": false,
+			"commonDosing": "400-700mg per week",
+			"commonStrengths": ["100mg/ml", "200mg/ml"]
+		}
+	},
+	"primo-a": {
+		"name": "Primobolan Acetate",
+		"scientificClass": "DHT Derivative",
+		"halfLife": 0.8,
+		"color": "#48dbfb",
+		"risks": {
+			"hairLoss": "Moderate",
+			"bloating": "None",
+			"aggression": "Very Low"
+		},
+		"benefits": {
+			"jointPainReduction": "None",
+			"hungerStimulation": "None"
+		},
+		"usage": {
+			"cutting": true,
+			"bulking": false,
+			"commonDosing": "100-150mg every other day",
+			"commonStrengths": ["100mg/ml"]
+		}
+	},
+	"var": {
+		"name": "Anavar",
+		"scientificClass": "DHT Derivative",
+		"halfLife": 0.4,
+		"color": "#00d2d3",
+		"risks": {
+			"hairLoss": "Low",
+			"bloating": "None",
+			"aggression": "Low"
+		},
+		"benefits": {
+			"jointPainReduction": "None",
+			"hungerStimulation": "None"
+		},
+		"usage": {
+			"cutting": true,
+			"bulking": false,
+			"commonDosing": "20-50mg daily",
+			"commonStrengths": ["10mg/tab", "50mg/tab"]
+		}
+	},
+	"win": {
+		"name": "Winstrol",
+		"scientificClass": "DHT Derivative",
+		"halfLife": 0.4,
+		"color": "#54a0ff",
+		"risks": {
+			"hairLoss": "High",
+			"bloating": "None",
+			"aggression": "_*WARNING:* Moderate risk of increased aggression_"
+		},
+		"benefits": {
+			"jointPainReduction": "Negative",
+			"hungerStimulation": "None"
+		},
+		"usage": {
+			"cutting": true,
+			"bulking": false,
+			"commonDosing": "25-50mg daily",
+			"commonStrengths": ["50mg/ml", "100mg/ml"]
+		}
+	},
+	"eq": {
+		"name": "Boldenone Undecylenate",
+		"scientificClass": "Testosterone Derivative",
+		"halfLife": 14,
+		"color": "#f1c40f",
+		"risks": {
+			"hairLoss": "Low",
+			"bloating": "Low",
+			"aggression": "Low"
+		},
+		"benefits": {
+			"jointPainReduction": "None",
+			"hungerStimulation": "Very High"
+		},
+		"usage": {
+			"cutting": true,
+			"bulking": true,
+			"commonDosing": "300-600mg per week",
+			"commonStrengths": ["300mg/ml"]
+		}
+	},
+	"bold-c": {
+		"name": "Boldenone Cypionate",
+		"scientificClass": "Testosterone Derivative",
+		"halfLife": 5,
+		"color": "#f39c12",
+		"risks": {
+			"hairLoss": "Low",
+			"bloating": "Low",
+			"aggression": "Low"
+		},
+		"benefits": {
+			"jointPainReduction": "None",
+			"hungerStimulation": "High"
+		},
+		"usage": {
+			"cutting": true,
+			"bulking": true,
+			"commonDosing": "300-600mg per week",
+			"commonStrengths": ["200mg/ml"]
+		}
+	},
+	"dbol": {
+		"name": "Dianabol",
+		"scientificClass": "Testosterone Derivative",
+		"halfLife": 0.2,
+		"color": "#e67e22",
+		"risks": {
+			"hairLoss": "High",
+			"bloating": "Very High",
+			"aggression": "_*WARNING:* High risk of increased aggression_"
+		},
+		"benefits": {
+			"jointPainReduction": "None",
+			"hungerStimulation": "High"
+		},
+		"usage": {
+			"cutting": false,
+			"bulking": true,
+			"commonDosing": "20-50mg daily",
+			"commonStrengths": ["10mg/tab", "25mg/tab", "50mg/tab"]
+		}
+	},
+	"tbol": {
+		"name": "Turinabol",
+		"scientificClass": "DHT Derivative",
+		"halfLife": 0.4,
+		"color": "#d35400",
+		"risks": {
+			"hairLoss": "Moderate",
+			"bloating": "None",
+			"aggression": "Low"
+		},
+		"benefits": {
+			"jointPainReduction": "None",
+			"hungerStimulation": "Low"
+		},
+		"usage": {
+			"cutting": true,
+			"bulking": false,
+			"commonDosing": "40-60mg daily",
+			"commonStrengths": ["10mg/tab", "20mg/tab"]
+		}
+	},
+	"halo": {
+		"name": "Halotestin",
+		"scientificClass": "DHT Derivative",
+		"halfLife": 0.3,
+		"color": "#ff6b6b",
+		"risks": {
+			"hairLoss": "High",
+			"bloating": "None",
+			"aggression": "_*WARNING:* Extremely high risk of aggressive behavior_"
+		},
+		"benefits": {
+			"jointPainReduction": "None",
+			"hungerStimulation": "None"
+		},
+		"usage": {
+			"cutting": true,
+			"bulking": false,
+			"commonDosing": "10-20mg daily",
+			"commonStrengths": ["5mg/tab", "10mg/tab"]
+		}
+	},
+	"anadrol": {
+		"name": "Anadrol",
+		"scientificClass": "DHT Derivative",
+		"halfLife": 0.3,
+		"color": "#ff4757",
+		"risks": {
+			"hairLoss": "High",
+			"bloating": "Very High",
+			"aggression": "_*WARNING:* High risk of increased aggression_"
+		},
+		"benefits": {
+			"jointPainReduction": "None",
+			"hungerStimulation": "Very High"
+		},
+		"usage": {
+			"cutting": false,
+			"bulking": true,
+			"commonDosing": "50-100mg daily",
+			"commonStrengths": ["50mg/tab"]
+		}
+	},
+	"primo-oral": {
+		"name": "Primobolan Oral",
+		"scientificClass": "DHT Derivative",
+		"halfLife": 0.2,
+		"color": "#5f27cd",
+		"risks": {
+			"hairLoss": "Moderate",
+			"bloating": "None",
+			"aggression": "Very Low"
+		},
+		"benefits": {
+			"jointPainReduction": "None",
+			"hungerStimulation": "None"
+		},
+		"usage": {
+			"cutting": true,
+			"bulking": false,
+			"commonDosing": "50-100mg daily",
+			"commonStrengths": ["25mg/tab"]
+		}
+	},
+	"prov": {
+		"name": "Proviron",
+		"scientificClass": "DHT Derivative",
+		"halfLife": 0.5,
+		"color": "#341f97",
+		"risks": {
+			"hairLoss": "Very High",
+			"bloating": "None",
+			"aggression": "Low"
+		},
+		"benefits": {
+			"jointPainReduction": "None",
+			"hungerStimulation": "None"
+		},
+		"usage": {
+			"cutting": true,
+			"bulking": false,
+			"commonDosing": "25-50mg daily",
+			"commonStrengths": ["25mg/tab"]
+		}
+	}
+}

@@ -1,37 +1,13 @@
 {
 	"name": "compound-tracker",
 	"version": "1.0.0",
-	"description": "A web application to track compound administrations and visualize their levels over time",
-	"main": "index.js",
-	"directories": {
-		"test": "tests"
-	},
+	"description": "Track compound administrations and visualize levels over time",
+	"type": "module",
 	"scripts": {
-		"start": "live-server src --port=3000",
-		"test": "jest",
-		"predeploy": "cp -r src/* .",
-		"deploy": "gh-pages -d .",
-		"postdeploy": "rm -f *.html *.css *.js",
-		"format": "prettier --write \"src/**/*.{js,html,css}\"",
-		"lint": "eslint \"src/**/*.js\""
+		"dev": "live-server src --port=3000 --no-browser",
+		"start": "live-server src --port=3000"
 	},
-	"keywords": [
-		"compound-tracker",
-		"visualization",
-		"chart.js"
-	],
-	"author": "",
-	"license": "ISC",
 	"devDependencies": {
-		"eslint": "^8.0.0",
-		"gh-pages": "^6.0.0",
-		"jest": "^29.0.0",
-		"live-server": "^1.2.2",
-		"prettier": "^3.0.0"
-	},
-	"homepage": "https://drunkonjava.github.io/compound_tracker.app",
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/drunkonjava/compound_tracker.app.git"
+		"live-server": "^1.2.2"
 	}
 }
