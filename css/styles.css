@@ -211,8 +211,8 @@ body {
 	top: var(--spacing-lg);
 	display: grid;
 	grid-template-areas:
-		"profile"
 		"admin"
+		"profile"
 		"info";
 	grid-template-rows: auto auto 1fr;
 	gap: var(--spacing-lg);
